@@ -1,12 +1,37 @@
 # Automated Outreach Pipeline (CLI)
 
-A modular Python CLI that runs an automated outreach workflow:
-1) Find similar companies (Stage 1 - Ocean)
-2) Find decision makers for each company (Stage 2 - Prospeo)
-3) Verify emails from LinkedIn URLs (Stage 3 - EazyReach)
-4) Send personalized emails (Stage 4 - Brevo)
+A modular Python CLI that runs an automated outreach workflow.
 
 When API keys are not configured, the pipeline uses mock data and simulates sending.
+
+---
+
+## Workflow
+
+Input Company Domain
+        ↓
+Find Similar Companies
+        ↓
+Find Decision Makers
+        ↓
+Verify Emails
+        ↓
+Export Contacts to CSV
+        ↓
+User Confirmation
+        ↓
+Send Personalized Emails
+
+---
+
+## Features
+
+- Modular architecture
+- CSV export
+- Email deduplication
+- Progress logging
+- User confirmation before sending
+- Mock provider fallback when API keys are unavailable
 
 ---
 
@@ -21,6 +46,7 @@ When API keys are not configured, the pipeline uses mock data and simulates send
 ---
 
 ## Setup
+
 
 ### 1) Create and activate a virtual environment (recommended)
 **Windows (PowerShell):**
